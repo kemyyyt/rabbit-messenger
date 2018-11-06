@@ -1,2 +1,5 @@
 /node_modules
-/config/*.example
+/config/app.js
+/config/rabbit.js
+.idea
+/messages/*.real.json

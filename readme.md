@@ -1,19 +1,15 @@
-# Rabbit Messanger #
+## Rabbit messenger ##
 
-### What is this repository for? ###
-
-* SportsApi Version 2.x (Laravel 5.5+)
-
-### How do I get set up? ###
-
-* Summary of set up
-
+### Install ###
 ```
-git clone git@bitbucket.org:tomko/sportsapiv2.git
-```
-```
-cp .env.example .env
-```
-* Edit your .env config file
+npm instal
 
+cp  config/app.js.example config/app.js
+
+cp  config/config/rabbit.js.example config/rabbit.js
+```
+### Run ###
+```
+npm run start
+```
 

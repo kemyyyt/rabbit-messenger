@@ -1,3 +1,4 @@
 module.exports = {
-    interval: 500
+    interval: 500, //  milliseconds
+    messagePath: "/../../messages/"
 };
