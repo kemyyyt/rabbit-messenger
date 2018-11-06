@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "rabbit-messenger",
+  "version": "0.0.1",
+  "description": "Rabbit messenger",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "kemmyyyt",
+  "dependencies": {
+    "amqplib": "^0.5.*"
+  },
+  "devDependencies": {
+  }
+}
