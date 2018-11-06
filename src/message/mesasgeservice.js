@@ -17,7 +17,6 @@ MessageService.prototype.init = function(channel) {
 
 MessageService.prototype.startSending = function() {
     console.info('[MessageService] Start Sending');
-    console.info(this);
     if(this.messagesCount){
         setInterval(
             () => this._send(), appConfig.interval
