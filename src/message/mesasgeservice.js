@@ -16,14 +16,20 @@ MessageService.prototype.init = function(channel) {
     return this;
 };
 MessageService.prototype.startSending = function() {
-    setInterval(
-        () => this._send(), appConfig.interval
-    );
+
+    if(this.messagesCount){
+        setInterval(
+            () => this._send(), appConfig.interval
+        );
+    } else {
+        console.error('Create messages in "messages/" without sample in file name !');
+        process.kill(process.pid);
+    }
+
 };
 
 MessageService.prototype._send = function() {
     console.info('Send Message');
-
     this.counter++;
     if(this.counter > this.messagesCount){
         console.info('Reset Message send queue');

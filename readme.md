@@ -6,7 +6,7 @@ npm instal
 
 cp  config/app.js.example config/app.js
 
-cp  config/config/rabbit.js.example config/rabbit.js
+cp  config/rabbit.js.example config/rabbit.js
 ```
 ### Run ###
 ```
