@@ -4,19 +4,20 @@ const messageData = require('./messagedata');
 
 function MessageService() {
     this.channel = null;
+    this.counter = -1;
+    messageData.init();
+    this.messagesCount = messageData.messages.length;
 }
 
 MessageService.prototype.init = function(channel) {
     this.channel = channel;
-    this.counter = -1;
-    this.messagesCount = messageData.messages.length;
-
-    messageData.init();
 
     return this;
 };
-MessageService.prototype.startSending = function() {
 
+MessageService.prototype.startSending = function() {
+    console.info('[MessageService] Start Sending');
+    console.info(this);
     if(this.messagesCount){
         setInterval(
             () => this._send(), appConfig.interval
@@ -29,10 +30,10 @@ MessageService.prototype.startSending = function() {
 };
 
 MessageService.prototype._send = function() {
-    console.info('Send Message');
+    console.info('[MessageService] Send Message');
     this.counter++;
     if(this.counter > this.messagesCount){
-        console.info('Reset Message send queue');
+        console.info('[MessageService] Reset Message send queue');
         this.counter = -1;
     }
     const message = messageData.messages[this.counter];
